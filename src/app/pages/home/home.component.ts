@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public date = "";
 
-  constructor() { }
+  constructor(private utils : UtilsService) { }
 
   ngOnInit(): void {
+
+    this.date = this.utils.whatTimeIs();
+    
   }
 
 }

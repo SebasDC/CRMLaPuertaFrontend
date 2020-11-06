@@ -1,1 +1,13 @@
-<p>projects works!</p>
+<div class="project-list">
+
+
+    <button  (click)="crear()">Crear</button>
+
+    <div  class="project-inline" *ngFor="let project of projects">
+        <span>Título proyecto : {{project.title + '    '}} </span>
+        <span>Nombre cliente : {{project.customer.name + '    '}} </span>
+        <span>Email cliente : {{project.customer.email + '    '}} </span>
+        
+    </div>
+
+</div>
