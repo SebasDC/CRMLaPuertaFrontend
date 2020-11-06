@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CRMLaPuertaFrontend"
+    }
+  },
+  "defaultProject": "CRMLaPuertaFrontend",
+  "cli": {
+    "analytics": "37a69d60-09f7-4bd8-b437-5d8af86958c8"
+  }
 }
