@@ -3,18 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HelloComponent } from './views/hello/hello.component';
-import { SebasComponent } from './components/sebas/sebas.component';
-import { OsamaComponent } from './components/osama/osama.component';
-import { BelenComponent } from './belen/belen.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { CustomersComponent } from './pages/customers/customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    SebasComponent,
-    OsamaComponent,
-    BelenComponent
+    HomeComponent,
+    ProjectsComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
