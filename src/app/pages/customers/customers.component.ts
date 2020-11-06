@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import axios from 'axios';
+import { CustomersService } from 'src/app/services/customers.service';
 
 
 export interface Customer {
+  _id : string,
   name: string,
   email: string,
   lastName: string
@@ -16,18 +17,15 @@ export interface Customer {
 export class CustomersComponent implements OnInit {
   public customers: Customer[] = [];
 
+  constructor(private customersService: CustomersService  ) {
 
-  constructor() {
-
-   }
+  }
 
   ngOnInit(): void {
-    axios.get(`https://jsonplaceholder.typicode.com/users`)
-      .then(response => response.data )
-      .then(customers => {
-        this.customers = customers;
-      })
+    this.customersService.getAllCustomers()
+      .then(customers => this.customers = customers)
   }
+
 
 
 }
