@@ -17,8 +17,8 @@ export class ProjectsService {
         .then(response => response.data);
   }
 
-  public getOneProject( id : string): Promise<Project> {
-      return axios.get(this.url + '/' + id)
+  public getOneProject(id: string, config: { populate : boolean} ): Promise<Project> {
+      return axios.get(this.url + '/' + id , { params : config})
         .then(response => response.data);
   }
 

@@ -19,7 +19,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectsService : ProjectsService) { }
 
   ngOnInit(): void {
-    this.projectsService.getAllProjects( { populate : true}  )
+    this.projectsService.getAllProjects( { populate : false}  )
       .then(projects => {
         
         this.projects = projects;
